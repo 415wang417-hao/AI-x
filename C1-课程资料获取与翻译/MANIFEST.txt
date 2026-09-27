@@ -1,0 +1,18 @@
+C1 课程资料获取与翻译 —— 资料包清单
+challenge_id : ch-20260717031336-pxzwy0
+deadline     : 2026-12-31T23:59
+导出时间     : 2026-09-26
+说明         : 由 export-challenge-pack（部分成功，超时）+ download-challenge-materials（补齐 PDF）合并整理；本地已做 SHA-256 复核。
+
+文件清单与校验值（SHA-256）
+7B4DBAB338BBB8EC18B1DEABCF5F06C1FA663DC40C4D00FC306438C58E9679C1  challenge.json                   3418 bytes
+4C62D9431105C6D1197F00310A6D00913AAF9130FFDE4123A3BA3FD6C031E008  CHALLENGE.md                     2759 bytes
+95E4A85BDBDC50ED8F5533C786E6772EF790CC9F05903CF48B3F6D9CDB13437D  challenge.yaml                    679 bytes
+09031854CC98D34905F8945FCE01F9599C4ABB5208157B86B331202F5DBDE685  rubric.json                      2512 bytes
+968B7A7BDCB3F105810B8AB00C8B8123631D598F763F11B3BC82D4D47A2B56B1  materials/CS146S_offline.zip   15151528 bytes
+BA5E5DDA4D5605BD3FFD3F058B6412FED88B02257ECDCAD6D60623FADD53FFE8  materials/Vibe_Coding_Playbook.pdf  7964392 bytes
+
+备注
+- CS146S_offline.zip 由资料包导出获得，大小与平台清单一致（15151528）。
+- Vibe_Coding_Playbook.pdf 因资料包导出超时未下载，后经 download-challenge-materials 单独抓取补齐，大小与平台清单一致（7964392）。
+- rubric 总分 100：contentAccuracy 25 / pipelineAutomation 20 / artifactCompleteness 15 / aiUsage 20 / reflectionQuality 20。

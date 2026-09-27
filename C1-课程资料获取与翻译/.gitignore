@@ -1,0 +1,17 @@
+﻿# --- 操作系统 / 编辑器 ---
+Thumbs.db
+desktop.ini
+.DS_Store
+.vscode/
+.idea/
+*.swp
+
+# --- Python ---
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# --- 大体积第三方原始素材（当前已纳入仓库；若要瘦身，取消下面两行注释后重新提交）---
+# materials/
+# raw_sources/

@@ -1,0 +1,460 @@
+{
+  "total_files": 45,
+  "passed_files": 45,
+  "failed_files": 0,
+  "pass_rate_pct": 100.0,
+  "total_issues": 0,
+  "status": "PASS",
+  "details": [
+    {
+      "file": "agentic-ai-threats.md",
+      "char_count": 2770,
+      "chinese_chars": 1374,
+      "chinese_ratio": 0.496,
+      "issues_count": 0,
+      "issues": [],
+      "passed": true,
+      "relative_path": "articles\\agentic-ai-threats.md"
+    },
+    {
+      "file": "ai-code-review-best-practices.md",
+      "char_count": 2756,
+      "chinese_chars": 1312,
+      "chinese_ratio": 0.476,
+      "issues_count": 0,
+      "issues": [],
+      "passed": true,
+      "relative_path": "articles\\ai-code-review-best-practices.md"
+    },
+    {
+      "file": "benefits-agentic-ai-oncall.md",
+      "char_count": 2787,
+      "chinese_chars": 1360,
+      "chinese_ratio": 0.488,
+      "issues_count": 0,
+      "issues": [],
+      "passed": true,
+      "relative_path": "articles\\benefits-agentic-ai-oncall.md"
+    },
+    {
+      "file": "claude-code-best-practices.md",
+      "char_count": 2811,
+      "chinese_chars": 1327,
+      "chinese_ratio": 0.472,
+      "issues_count": 0,
+      "issues": [],
+      "passed": true,
+      "relative_path": "articles\\claude-code-best-practices.md"
+    },
+    {
+      "file": "code-review-essentials.md",
+      "char_count": 2758,
+      "chinese_chars": 1314,
+      "chinese_ratio": 0.476,
+      "issues_count": 0,
+      "issues": [],
+      "passed": true,
+      "relative_path": "articles\\code-review-essentials.md"
+    },
+    {
+      "file": "code-reviews-just-do-it.md",
+      "char_count": 2747,
+      "chinese_chars": 1343,
+      "chinese_ratio": 0.489,
+      "issues_count": 0,
+      "issues": [],
+      "passed": true,
+      "relative_path": "articles\\code-reviews-just-do-it.md"
+    },
+    {
+      "file": "context-rot.md",
+      "char_count": 2728,
+      "chinese_chars": 1300,
+      "chinese_ratio": 0.477,
+      "issues_count": 0,
+      "issues": [],
+      "passed": true,
+      "relative_path": "articles\\context-rot.md"
+    },
+    {
+      "file": "copilot-prompt-injection-rce.md",
+      "char_count": 3024,
+      "chinese_chars": 1427,
+      "chinese_ratio": 0.472,
+      "issues_count": 0,
+      "issues": [],
+      "passed": true,
+      "relative_path": "articles\\copilot-prompt-injection-rce.md"
+    },
+    {
+      "file": "devin-coding-agents-101.md",
+      "char_count": 2785,
+      "chinese_chars": 1337,
+      "chinese_ratio": 0.48,
+      "issues_count": 0,
+      "issues": [],
+      "passed": true,
+      "relative_path": "articles\\devin-coding-agents-101.md"
+    },
+    {
+      "file": "finding-vulnerabilities-claude-codex.md",
+      "char_count": 2930,
+      "chinese_chars": 1388,
+      "chinese_ratio": 0.474,
+      "issues_count": 0,
+      "issues": [],
+      "passed": true,
+      "relative_path": "articles\\finding-vulnerabilities-claude-codex.md"
+    },
+    {
+      "file": "good-context-good-code.md",
+      "char_count": 2799,
+      "chinese_chars": 1416,
+      "chinese_ratio": 0.506,
+      "issues_count": 0,
+      "issues": [],
+      "passed": true,
+      "relative_path": "articles\\good-context-good-code.md"
+    },
+    {
+      "file": "how-long-contexts-fail.md",
+      "char_count": 2852,
+      "chinese_chars": 1328,
+      "chinese_ratio": 0.466,
+      "issues_count": 0,
+      "issues": [],
+      "passed": true,
+      "relative_path": "articles\\how-long-contexts-fail.md"
+    },
+    {
+      "file": "how-to-review-code-effectively.md",
+      "char_count": 2817,
+      "chinese_chars": 1312,
+      "chinese_ratio": 0.466,
+      "issues_count": 0,
+      "issues": [],
+      "passed": true,
+      "relative_path": "articles\\how-to-review-code-effectively.md"
+    },
+    {
+      "file": "how-warp-uses-warp.md",
+      "char_count": 2818,
+      "chinese_chars": 1346,
+      "chinese_ratio": 0.478,
+      "issues_count": 0,
+      "issues": [],
+      "passed": true,
+      "relative_path": "articles\\how-warp-uses-warp.md"
+    },
+    {
+      "file": "kubernetes-troubleshooting-ai.md",
+      "char_count": 2884,
+      "chinese_chars": 1321,
+      "chinese_ratio": 0.458,
+      "issues_count": 0,
+      "issues": [],
+      "passed": true,
+      "relative_path": "articles\\kubernetes-troubleshooting-ai.md"
+    },
+    {
+      "file": "lessons-from-ai-code-reviews.md",
+      "char_count": 2719,
+      "chinese_chars": 1306,
+      "chinese_ratio": 0.48,
+      "issues_count": 0,
+      "issues": [],
+      "passed": true,
+      "relative_path": "articles\\lessons-from-ai-code-reviews.md"
+    },
+    {
+      "file": "mcp-food-for-thought.md",
+      "char_count": 2836,
+      "chinese_chars": 1341,
+      "chinese_ratio": 0.473,
+      "issues_count": 0,
+      "issues": [],
+      "passed": true,
+      "relative_path": "articles\\mcp-food-for-thought.md"
+    },
+    {
+      "file": "mcp-introduction.md",
+      "char_count": 2935,
+      "chinese_chars": 1361,
+      "chinese_ratio": 0.464,
+      "issues_count": 0,
+      "issues": [],
+      "passed": true,
+      "relative_path": "articles\\mcp-introduction.md"
+    },
+    {
+      "file": "mcp-registry-preview.md",
+      "char_count": 2890,
+      "chinese_chars": 1399,
+      "chinese_ratio": 0.484,
+      "issues_count": 0,
+      "issues": [],
+      "passed": true,
+      "relative_path": "articles\\mcp-registry-preview.md"
+    },
+    {
+      "file": "mcp-server-authentication.md",
+      "char_count": 2915,
+      "chinese_chars": 1374,
+      "chinese_ratio": 0.471,
+      "issues_count": 0,
+      "issues": [],
+      "passed": true,
+      "relative_path": "articles\\mcp-server-authentication.md"
+    },
+    {
+      "file": "multi-agent-systems-ai-native.md",
+      "char_count": 2809,
+      "chinese_chars": 1333,
+      "chinese_ratio": 0.475,
+      "issues_count": 0,
+      "issues": [],
+      "passed": true,
+      "relative_path": "articles\\multi-agent-systems-ai-native.md"
+    },
+    {
+      "file": "observability-basics.md",
+      "char_count": 2804,
+      "chinese_chars": 1343,
+      "chinese_ratio": 0.479,
+      "issues_count": 0,
+      "issues": [],
+      "passed": true,
+      "relative_path": "articles\\observability-basics.md"
+    },
+    {
+      "file": "owasp-top-ten.md",
+      "char_count": 2857,
+      "chinese_chars": 1342,
+      "chinese_ratio": 0.47,
+      "issues_count": 0,
+      "issues": [],
+      "passed": true,
+      "relative_path": "articles\\owasp-top-ten.md"
+    },
+    {
+      "file": "peeking-under-the-hood-of-claude-code.md",
+      "char_count": 2791,
+      "chinese_chars": 1296,
+      "chinese_ratio": 0.464,
+      "issues_count": 0,
+      "issues": [],
+      "passed": true,
+      "relative_path": "articles\\peeking-under-the-hood-of-claude-code.md"
+    },
+    {
+      "file": "prompt-engineering-guide.md",
+      "char_count": 2901,
+      "chinese_chars": 1377,
+      "chinese_ratio": 0.475,
+      "issues_count": 0,
+      "issues": [],
+      "passed": true,
+      "relative_path": "articles\\prompt-engineering-guide.md"
+    },
+    {
+      "file": "prompt-engineering-overview.md",
+      "char_count": 2889,
+      "chinese_chars": 1409,
+      "chinese_ratio": 0.488,
+      "issues_count": 0,
+      "issues": [],
+      "passed": true,
+      "relative_path": "articles\\prompt-engineering-overview.md"
+    },
+    {
+      "file": "sast-vs-dast.md",
+      "char_count": 2750,
+      "chinese_chars": 1310,
+      "chinese_ratio": 0.476,
+      "issues_count": 0,
+      "issues": [],
+      "passed": true,
+      "relative_path": "articles\\sast-vs-dast.md"
+    },
+    {
+      "file": "specs-are-the-new-source-code.md",
+      "char_count": 2827,
+      "chinese_chars": 1418,
+      "chinese_ratio": 0.502,
+      "issues_count": 0,
+      "issues": [],
+      "passed": true,
+      "relative_path": "articles\\specs-are-the-new-source-code.md"
+    },
+    {
+      "file": "sre-introduction.md",
+      "char_count": 2747,
+      "chinese_chars": 1326,
+      "chinese_ratio": 0.483,
+      "issues_count": 0,
+      "issues": [],
+      "passed": true,
+      "relative_path": "articles\\sre-introduction.md"
+    },
+    {
+      "file": "warp-vs-claude-code.md",
+      "char_count": 2788,
+      "chinese_chars": 1303,
+      "chinese_ratio": 0.467,
+      "issues_count": 0,
+      "issues": [],
+      "passed": true,
+      "relative_path": "articles\\warp-vs-claude-code.md"
+    },
+    {
+      "file": "writing-effective-tools-for-agents.md",
+      "char_count": 2717,
+      "chinese_chars": 1314,
+      "chinese_ratio": 0.484,
+      "issues_count": 0,
+      "issues": [],
+      "passed": true,
+      "relative_path": "articles\\writing-effective-tools-for-agents.md"
+    },
+    {
+      "file": "ai-assisted-code-review-assessment_zh.md",
+      "char_count": 2534,
+      "chinese_chars": 1069,
+      "chinese_ratio": 0.422,
+      "issues_count": 0,
+      "issues": [],
+      "passed": true,
+      "relative_path": "papers\\ai-assisted-code-review-assessment_zh.md"
+    },
+    {
+      "file": "how-anthropic-uses-claude-code_zh.md",
+      "char_count": 2250,
+      "chinese_chars": 1100,
+      "chinese_ratio": 0.489,
+      "issues_count": 0,
+      "issues": [],
+      "passed": true,
+      "relative_path": "papers\\how-anthropic-uses-claude-code_zh.md"
+    },
+    {
+      "file": "how-openai-uses-codex_zh.md",
+      "char_count": 2092,
+      "chinese_chars": 1119,
+      "chinese_ratio": 0.535,
+      "issues_count": 0,
+      "issues": [],
+      "passed": true,
+      "relative_path": "papers\\how-openai-uses-codex_zh.md"
+    },
+    {
+      "file": "vibe_coding_playbook_zh.md",
+      "char_count": 7889,
+      "chinese_chars": 3009,
+      "chinese_ratio": 0.381,
+      "issues_count": 0,
+      "issues": [],
+      "passed": true,
+      "relative_path": "playbook\\vibe_coding_playbook_zh.md"
+    },
+    {
+      "file": "01_week01_intro_coding_llms_zh.md",
+      "char_count": 1346,
+      "chinese_chars": 457,
+      "chinese_ratio": 0.34,
+      "issues_count": 0,
+      "issues": [],
+      "passed": true,
+      "relative_path": "syllabus\\01_week01_intro_coding_llms_zh.md"
+    },
+    {
+      "file": "02_week02_anatomy_of_coding_agents_zh.md",
+      "char_count": 1681,
+      "chinese_chars": 493,
+      "chinese_ratio": 0.293,
+      "issues_count": 0,
+      "issues": [],
+      "passed": true,
+      "relative_path": "syllabus\\02_week02_anatomy_of_coding_agents_zh.md"
+    },
+    {
+      "file": "03_week03_the_ai_ide_zh.md",
+      "char_count": 1418,
+      "chinese_chars": 469,
+      "chinese_ratio": 0.331,
+      "issues_count": 0,
+      "issues": [],
+      "passed": true,
+      "relative_path": "syllabus\\03_week03_the_ai_ide_zh.md"
+    },
+    {
+      "file": "04_week04_claude_code_and_agentic_coding_zh.md",
+      "char_count": 1330,
+      "chinese_chars": 421,
+      "chinese_ratio": 0.317,
+      "issues_count": 0,
+      "issues": [],
+      "passed": true,
+      "relative_path": "syllabus\\04_week04_claude_code_and_agentic_coding_zh.md"
+    },
+    {
+      "file": "05_week05_warp_and_ai_terminal_zh.md",
+      "char_count": 1174,
+      "chinese_chars": 422,
+      "chinese_ratio": 0.359,
+      "issues_count": 0,
+      "issues": [],
+      "passed": true,
+      "relative_path": "syllabus\\05_week05_warp_and_ai_terminal_zh.md"
+    },
+    {
+      "file": "06_week06_ai_security_vulnerability_detection_zh.md",
+      "char_count": 1634,
+      "chinese_chars": 515,
+      "chinese_ratio": 0.315,
+      "issues_count": 0,
+      "issues": [],
+      "passed": true,
+      "relative_path": "syllabus\\06_week06_ai_security_vulnerability_detection_zh.md"
+    },
+    {
+      "file": "07_week07_ai_powered_code_review_zh.md",
+      "char_count": 1729,
+      "chinese_chars": 536,
+      "chinese_ratio": 0.31,
+      "issues_count": 0,
+      "issues": [],
+      "passed": true,
+      "relative_path": "syllabus\\07_week07_ai_powered_code_review_zh.md"
+    },
+    {
+      "file": "08_week08_fullstack_ai_dev_deployment_zh.md",
+      "char_count": 1115,
+      "chinese_chars": 401,
+      "chinese_ratio": 0.36,
+      "issues_count": 0,
+      "issues": [],
+      "passed": true,
+      "relative_path": "syllabus\\08_week08_fullstack_ai_dev_deployment_zh.md"
+    },
+    {
+      "file": "09_week09_sre_observability_agentic_oncall_zh.md",
+      "char_count": 1700,
+      "chinese_chars": 490,
+      "chinese_ratio": 0.288,
+      "issues_count": 0,
+      "issues": [],
+      "passed": true,
+      "relative_path": "syllabus\\09_week09_sre_observability_agentic_oncall_zh.md"
+    },
+    {
+      "file": "10_week10_future_of_ai_software_engineering_zh.md",
+      "char_count": 1133,
+      "chinese_chars": 430,
+      "chinese_ratio": 0.38,
+      "issues_count": 0,
+      "issues": [],
+      "passed": true,
+      "relative_path": "syllabus\\10_week10_future_of_ai_software_engineering_zh.md"
+    }
+  ]
+}
