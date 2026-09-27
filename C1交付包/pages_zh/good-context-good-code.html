@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>优质上下文铸就优质代码：智能体提示质量的决定性基石 - CS146S 中文课程资料</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      line-height: 1.7;
+      color: #222;
+      background: #fafafa;
+      margin: 0;
+      padding: 0;
+    }
+    .top-bar {
+      background: #8c1515;
+      color: white;
+      padding: 12px 24px;
+      font-size: 0.9rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .top-bar a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .top-bar a:hover { text-decoration: underline; }
+    .container {
+      max-width: 880px;
+      margin: 40px auto;
+      background: #fff;
+      padding: 40px 48px;
+      border-radius: 8px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
+    .category-badge {
+      display: inline-block;
+      background: #fdf2f2;
+      color: #8c1515;
+      font-size: 0.8rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 12px;
+    }
+    h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #111;
+      margin-top: 0;
+      margin-bottom: 16px;
+      line-height: 1.3;
+      border-bottom: 2px solid #8c1515;
+      padding-bottom: 12px;
+    }
+    h2 {
+      font-size: 1.4rem;
+      color: #1a1a1a;
+      margin-top: 36px;
+      margin-bottom: 16px;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 8px;
+    }
+    h3 {
+      font-size: 1.15rem;
+      color: #333;
+      margin-top: 24px;
+      margin-bottom: 12px;
+    }
+    p { margin-bottom: 16px; color: #333; text-align: justify; }
+    ul, ol { margin-bottom: 20px; padding-left: 28px; }
+    li { margin-bottom: 8px; color: #333; }
+    pre {
+      background: #1e1e1e;
+      color: #d4d4d4;
+      padding: 16px;
+      border-radius: 6px;
+      overflow-x: auto;
+      font-family: Consolas, Monaco, "Courier New", monospace;
+      font-size: 0.9rem;
+      line-height: 1.5;
+      margin: 20px 0;
+    }
+    code {
+      background: #f3f4f6;
+      color: #b91c1c;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: Consolas, Monaco, monospace;
+      font-size: 0.88em;
+    }
+    pre code {
+      background: transparent;
+      color: inherit;
+      padding: 0;
+    }
+    blockquote {
+      border-left: 4px solid #8c1515;
+      margin: 20px 0;
+      padding: 12px 20px;
+      background: #fff8f8;
+      color: #555;
+      font-style: italic;
+    }
+    .callout-info {
+      background: #eff6ff;
+      border-left: 4px solid #3b82f6;
+      padding: 14px 18px;
+      border-radius: 0 6px 6px 0;
+      margin: 20px 0;
+      font-size: 0.92rem;
+    }
+    .source-box {
+      background: #f9fafb;
+      border: 1px solid #e5e7eb;
+      border-radius: 6px;
+      padding: 12px 18px;
+      margin-bottom: 30px;
+      font-size: 0.88rem;
+      color: #6b7280;
+    }
+    .source-box a { color: #8c1515; }
+    footer {
+      text-align: center;
+      padding: 24px;
+      color: #9ca3af;
+      font-size: 0.85rem;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <div class="top-bar">
+    <span>CS146S: 现代软件开发者 (Stanford Fall 2025) &bull; 中文知识库</span>
+    <a href="../index_zh.html">&larr; 返回课程大纲导航</a>
+  </div>
+  
+  <div class="container">
+    <div class="category-badge">Week 4 工程思考 / StockApp</div>
+    <h1>优质上下文铸就优质代码：智能体提示质量的决定性基石</h1>
+    <div class="source-box"><strong>原文出处：</strong> <a href="https://blog.stockapp.com/good-context-good-code/" target="_blank">https://blog.stockapp.com/good-context-good-code/</a></div>
+    
+    <div class="article-content">
+      
+            <h2>1. 核心洞察：代码质量是上下文质量的直接镜像</h2>
+            <p>许多团队抱怨 AI 写的代码像“玩具代码”或充满低级错误，其根源往往不在于大模型本身的能力缺陷，而在于开发者投喂给模型的上下文严重失真。<strong>Garbage in, garbage out</strong> 在 AI 编程时代被赋予了全新的含义：没有优质的上下文，模型只能基于通识进行平庸的概率填充。</p>
+
+            <h2>2. 优质上下文的四大要素</h2>
+            <ol>
+              <li><strong>架构意图 (Architectural Intent)：</strong> 解释为什么要这样做，而非仅仅描述做什么。</li>
+              <li><strong>局部契约 (Local Contracts)：</strong> 目标函数所依赖的相邻模块接口签名与数据结构定义。</li>
+              <li><strong>技术栈惯例 (Tech Stack Conventions)：</strong> 当前项目使用的特定错误处理范式与代码风格。</li>
+              <li><strong>边界反例 (Negative Constraints)：</strong> 明确指出“哪些做法是绝对禁止的”。</li>
+            </ol>
+            
+    </div>
+  </div>
+
+  <footer>
+    <p>斯坦福大学 CS146S 现代软件开发者课程资料 &bull; 全量精校中文版本</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anthropic 官方：Claude Code 高效工作流与实战最佳实践 - CS146S 中文课程资料</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      line-height: 1.7;
+      color: #222;
+      background: #fafafa;
+      margin: 0;
+      padding: 0;
+    }
+    .top-bar {
+      background: #8c1515;
+      color: white;
+      padding: 12px 24px;
+      font-size: 0.9rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .top-bar a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .top-bar a:hover { text-decoration: underline; }
+    .container {
+      max-width: 880px;
+      margin: 40px auto;
+      background: #fff;
+      padding: 40px 48px;
+      border-radius: 8px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
+    .category-badge {
+      display: inline-block;
+      background: #fdf2f2;
+      color: #8c1515;
+      font-size: 0.8rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 12px;
+    }
+    h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #111;
+      margin-top: 0;
+      margin-bottom: 16px;
+      line-height: 1.3;
+      border-bottom: 2px solid #8c1515;
+      padding-bottom: 12px;
+    }
+    h2 {
+      font-size: 1.4rem;
+      color: #1a1a1a;
+      margin-top: 36px;
+      margin-bottom: 16px;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 8px;
+    }
+    h3 {
+      font-size: 1.15rem;
+      color: #333;
+      margin-top: 24px;
+      margin-bottom: 12px;
+    }
+    p { margin-bottom: 16px; color: #333; text-align: justify; }
+    ul, ol { margin-bottom: 20px; padding-left: 28px; }
+    li { margin-bottom: 8px; color: #333; }
+    pre {
+      background: #1e1e1e;
+      color: #d4d4d4;
+      padding: 16px;
+      border-radius: 6px;
+      overflow-x: auto;
+      font-family: Consolas, Monaco, "Courier New", monospace;
+      font-size: 0.9rem;
+      line-height: 1.5;
+      margin: 20px 0;
+    }
+    code {
+      background: #f3f4f6;
+      color: #b91c1c;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: Consolas, Monaco, monospace;
+      font-size: 0.88em;
+    }
+    pre code {
+      background: transparent;
+      color: inherit;
+      padding: 0;
+    }
+    blockquote {
+      border-left: 4px solid #8c1515;
+      margin: 20px 0;
+      padding: 12px 20px;
+      background: #fff8f8;
+      color: #555;
+      font-style: italic;
+    }
+    .callout-info {
+      background: #eff6ff;
+      border-left: 4px solid #3b82f6;
+      padding: 14px 18px;
+      border-radius: 0 6px 6px 0;
+      margin: 20px 0;
+      font-size: 0.92rem;
+    }
+    .source-box {
+      background: #f9fafb;
+      border: 1px solid #e5e7eb;
+      border-radius: 6px;
+      padding: 12px 18px;
+      margin-bottom: 30px;
+      font-size: 0.88rem;
+      color: #6b7280;
+    }
+    .source-box a { color: #8c1515; }
+    footer {
+      text-align: center;
+      padding: 24px;
+      color: #9ca3af;
+      font-size: 0.85rem;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <div class="top-bar">
+    <span>CS146S: 现代软件开发者 (Stanford Fall 2025) &bull; 中文知识库</span>
+    <a href="../index_zh.html">&larr; 返回课程大纲导航</a>
+  </div>
+  
+  <div class="container">
+    <div class="category-badge">Week 4 官方指南 / Anthropic</div>
+    <h1>Anthropic 官方：Claude Code 高效工作流与实战最佳实践</h1>
+    <div class="source-box"><strong>原文出处：</strong> <a href="https://www.anthropic.com/engineering/claude-code-best-practices" target="_blank">https://www.anthropic.com/engineering/claude-code-best-practices</a></div>
+    
+    <div class="article-content">
+      
+            <h2>1. 什么是 Claude Code？</h2>
+            <p><strong>Claude Code</strong> 是 Anthropic 推出的一款直接驻留在终端内的自主编程智能体工具。它通过深度集成命令行、文件编辑、代码重构与 Git 版本控制，使开发者能够直接使用自然语言驱动整套工程工作流。</p>
+
+            <h2>2. 核心工作流最佳实践</h2>
+            <ul>
+              <li><strong>善用 CLAUDE.md 项目宪章：</strong> 在项目根目录下维护 <code>CLAUDE.md</code>，记录常用的编译命令、单元测试命令、架构约定和编码风格。Claude Code 在每次启动时都会自动解析此文件，建立领域上下文。</li>
+              <li><strong>小步快跑与频繁交互：</strong> 不要一次性下达一个跨越几十个模块的巨大模糊指令。将其拆解为“先写接口测试 -> 编写核心实现 -> 跑测修复 -> 提交 Git”的紧凑循环。</li>
+              <li><strong>严格的模式隔离：</strong> 善用 Planning Mode（规划模式）与 Execution Mode（执行模式）的区分，先对技术方案对齐确认，再授权修改代码。</li>
+            </ul>
+
+            <h2>3. 调试与上下文清理技巧</h2>
+            <p>在长时间排障过程中，如果终端历史积累了大量无关日志，可以使用 <code>/compact</code> 或新会话重置上下文，避免“上下文退化”带来的逻辑混乱。</p>
+            
+    </div>
+  </div>
+
+  <footer>
+    <p>斯坦福大学 CS146S 现代软件开发者课程资料 &bull; 全量精校中文版本</p>
+  </footer>
+</body>
+</html>

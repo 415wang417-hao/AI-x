@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Devin 团队：现代自主编程智能体架构 101 - CS146S 中文课程资料</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      line-height: 1.7;
+      color: #222;
+      background: #fafafa;
+      margin: 0;
+      padding: 0;
+    }
+    .top-bar {
+      background: #8c1515;
+      color: white;
+      padding: 12px 24px;
+      font-size: 0.9rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .top-bar a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .top-bar a:hover { text-decoration: underline; }
+    .container {
+      max-width: 880px;
+      margin: 40px auto;
+      background: #fff;
+      padding: 40px 48px;
+      border-radius: 8px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
+    .category-badge {
+      display: inline-block;
+      background: #fdf2f2;
+      color: #8c1515;
+      font-size: 0.8rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 12px;
+    }
+    h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #111;
+      margin-top: 0;
+      margin-bottom: 16px;
+      line-height: 1.3;
+      border-bottom: 2px solid #8c1515;
+      padding-bottom: 12px;
+    }
+    h2 {
+      font-size: 1.4rem;
+      color: #1a1a1a;
+      margin-top: 36px;
+      margin-bottom: 16px;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 8px;
+    }
+    h3 {
+      font-size: 1.15rem;
+      color: #333;
+      margin-top: 24px;
+      margin-bottom: 12px;
+    }
+    p { margin-bottom: 16px; color: #333; text-align: justify; }
+    ul, ol { margin-bottom: 20px; padding-left: 28px; }
+    li { margin-bottom: 8px; color: #333; }
+    pre {
+      background: #1e1e1e;
+      color: #d4d4d4;
+      padding: 16px;
+      border-radius: 6px;
+      overflow-x: auto;
+      font-family: Consolas, Monaco, "Courier New", monospace;
+      font-size: 0.9rem;
+      line-height: 1.5;
+      margin: 20px 0;
+    }
+    code {
+      background: #f3f4f6;
+      color: #b91c1c;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: Consolas, Monaco, monospace;
+      font-size: 0.88em;
+    }
+    pre code {
+      background: transparent;
+      color: inherit;
+      padding: 0;
+    }
+    blockquote {
+      border-left: 4px solid #8c1515;
+      margin: 20px 0;
+      padding: 12px 20px;
+      background: #fff8f8;
+      color: #555;
+      font-style: italic;
+    }
+    .callout-info {
+      background: #eff6ff;
+      border-left: 4px solid #3b82f6;
+      padding: 14px 18px;
+      border-radius: 0 6px 6px 0;
+      margin: 20px 0;
+      font-size: 0.92rem;
+    }
+    .source-box {
+      background: #f9fafb;
+      border: 1px solid #e5e7eb;
+      border-radius: 6px;
+      padding: 12px 18px;
+      margin-bottom: 30px;
+      font-size: 0.88rem;
+      color: #6b7280;
+    }
+    .source-box a { color: #8c1515; }
+    footer {
+      text-align: center;
+      padding: 24px;
+      color: #9ca3af;
+      font-size: 0.85rem;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <div class="top-bar">
+    <span>CS146S: 现代软件开发者 (Stanford Fall 2025) &bull; 中文知识库</span>
+    <a href="../index_zh.html">&larr; 返回课程大纲导航</a>
+  </div>
+  
+  <div class="container">
+    <div class="category-badge">Week 3 智能体 / Cognition</div>
+    <h1>Devin 团队：现代自主编程智能体架构 101</h1>
+    <div class="source-box"><strong>原文出处：</strong> <a href="https://devin.ai/agents101" target="_blank">https://devin.ai/agents101</a></div>
+    
+    <div class="article-content">
+      
+            <h2>1. 编程智能体 (Coding Agent) 的本质</h2>
+            <p>Cognition 团队通过 Devin 展示了世界上第一个真正意义上的自主 AI 软件工程师。编程智能体不仅仅是一个支持代码补全的代码生成器，它是一个<strong>具备感知、推理、工具调用、长期记忆与自主修复循环（Sense-Plan-Act Loop）的闭环自主系统</strong>。</p>
+
+            <h2>2. 编程智能体的核心系统架构</h2>
+            <ul>
+              <li><strong>执行沙箱 (Execution Sandbox)：</strong> 一个完全隔离、具备完整 Linux Shell、浏览器与开发工具链的安全虚拟机环境。</li>
+              <li><strong>环境感知与反馈收集器：</strong> 智能体能够阅读控制台输出、编译器报错、浏览器渲染截图甚至网络抓包日志。</li>
+              <li><strong>规划与动态回溯引擎：</strong> 当智能体发现单元测试报错时，不会慌乱重来，而是能够分析调用栈、定位引入 bug 的具体 commit 并执行局部回滚与重构。</li>
+            </ul>
+
+            <h2>3. 智能体自主解决工程问题的核心瓶颈</h2>
+            <p>Devin 团队指出，智能体在处理大型代码库时面临的最大挑战不是代码语法，而是“如何在成千上万个文件中快速定位关键逻辑”以及“如何在漫长的迭代过程中保持对初始用户意图的持续聚焦”。这正是上下文管理与架构设计在智能体时代成为显学的原因。</p>
+            
+    </div>
+  </div>
+
+  <footer>
+    <p>斯坦福大学 CS146S 现代软件开发者课程资料 &bull; 全量精校中文版本</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>使用 AI 智能体自动化排查 Kubernetes 疑难故障深度实战 - CS146S 中文课程资料</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      line-height: 1.7;
+      color: #222;
+      background: #fafafa;
+      margin: 0;
+      padding: 0;
+    }
+    .top-bar {
+      background: #8c1515;
+      color: white;
+      padding: 12px 24px;
+      font-size: 0.9rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .top-bar a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .top-bar a:hover { text-decoration: underline; }
+    .container {
+      max-width: 880px;
+      margin: 40px auto;
+      background: #fff;
+      padding: 40px 48px;
+      border-radius: 8px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
+    .category-badge {
+      display: inline-block;
+      background: #fdf2f2;
+      color: #8c1515;
+      font-size: 0.8rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 12px;
+    }
+    h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #111;
+      margin-top: 0;
+      margin-bottom: 16px;
+      line-height: 1.3;
+      border-bottom: 2px solid #8c1515;
+      padding-bottom: 12px;
+    }
+    h2 {
+      font-size: 1.4rem;
+      color: #1a1a1a;
+      margin-top: 36px;
+      margin-bottom: 16px;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 8px;
+    }
+    h3 {
+      font-size: 1.15rem;
+      color: #333;
+      margin-top: 24px;
+      margin-bottom: 12px;
+    }
+    p { margin-bottom: 16px; color: #333; text-align: justify; }
+    ul, ol { margin-bottom: 20px; padding-left: 28px; }
+    li { margin-bottom: 8px; color: #333; }
+    pre {
+      background: #1e1e1e;
+      color: #d4d4d4;
+      padding: 16px;
+      border-radius: 6px;
+      overflow-x: auto;
+      font-family: Consolas, Monaco, "Courier New", monospace;
+      font-size: 0.9rem;
+      line-height: 1.5;
+      margin: 20px 0;
+    }
+    code {
+      background: #f3f4f6;
+      color: #b91c1c;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: Consolas, Monaco, monospace;
+      font-size: 0.88em;
+    }
+    pre code {
+      background: transparent;
+      color: inherit;
+      padding: 0;
+    }
+    blockquote {
+      border-left: 4px solid #8c1515;
+      margin: 20px 0;
+      padding: 12px 20px;
+      background: #fff8f8;
+      color: #555;
+      font-style: italic;
+    }
+    .callout-info {
+      background: #eff6ff;
+      border-left: 4px solid #3b82f6;
+      padding: 14px 18px;
+      border-radius: 0 6px 6px 0;
+      margin: 20px 0;
+      font-size: 0.92rem;
+    }
+    .source-box {
+      background: #f9fafb;
+      border: 1px solid #e5e7eb;
+      border-radius: 6px;
+      padding: 12px 18px;
+      margin-bottom: 30px;
+      font-size: 0.88rem;
+      color: #6b7280;
+    }
+    .source-box a { color: #8c1515; }
+    footer {
+      text-align: center;
+      padding: 24px;
+      color: #9ca3af;
+      font-size: 0.85rem;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <div class="top-bar">
+    <span>CS146S: 现代软件开发者 (Stanford Fall 2025) &bull; 中文知识库</span>
+    <a href="../index_zh.html">&larr; 返回课程大纲导航</a>
+  </div>
+  
+  <div class="container">
+    <div class="category-badge">Week 9 K8s 实战 / Resolve AI</div>
+    <h1>使用 AI 智能体自动化排查 Kubernetes 疑难故障深度实战</h1>
+    <div class="source-box"><strong>原文出处：</strong> <a href="https://resolve.ai/blog/kubernetes-troubleshooting-in-resolve-ai" target="_blank">https://resolve.ai/blog/kubernetes-troubleshooting-in-resolve-ai</a></div>
+    
+    <div class="article-content">
+      
+            <h2>1. Kubernetes 调试的复杂性挑战</h2>
+            <p>K8s 拥有庞大的声明式对象（Pod, Deployment, Service, Ingress, PV/PVC）与复杂的网络插件体系，排查 <code>CrashLoopBackOff</code>、<code>OOMKilled</code> 或 <code>ImagePullBackOff</code> 往往需要跨越多个抽象层级。</p>
+
+            <h2>2. 智能体自主排障的标准执行树</h2>
+            <ul>
+              <li><strong>第 1 步：</strong> 执行 <code>kubectl describe pod</code> 获取原始 Kubernetes Events。</li>
+              <li><strong>第 2 步：</strong> 调用日志工具抓取上一个失败容器的终端报错与退出码。</li>
+              <li><strong>第 3 步：</strong> 关联分析节点的资源水位（Memory/CPU Pressure）与安全策略（NetworkPolicy, RBAC）。</li>
+              <li><strong>第 4 步：</strong> 输出具有针对性的 Manifest 修正补丁或配置调优方案。</li>
+            </ul>
+            
+    </div>
+  </div>
+
+  <footer>
+    <p>斯坦福大学 CS146S 现代软件开发者课程资料 &bull; 全量精校中文版本</p>
+  </footer>
+</body>
+</html>

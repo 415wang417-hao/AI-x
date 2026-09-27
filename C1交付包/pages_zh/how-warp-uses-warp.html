@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Warp 内部工程实践：如何用 AI 终端构建下一代 AI 终端 - CS146S 中文课程资料</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      line-height: 1.7;
+      color: #222;
+      background: #fafafa;
+      margin: 0;
+      padding: 0;
+    }
+    .top-bar {
+      background: #8c1515;
+      color: white;
+      padding: 12px 24px;
+      font-size: 0.9rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .top-bar a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .top-bar a:hover { text-decoration: underline; }
+    .container {
+      max-width: 880px;
+      margin: 40px auto;
+      background: #fff;
+      padding: 40px 48px;
+      border-radius: 8px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
+    .category-badge {
+      display: inline-block;
+      background: #fdf2f2;
+      color: #8c1515;
+      font-size: 0.8rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 12px;
+    }
+    h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #111;
+      margin-top: 0;
+      margin-bottom: 16px;
+      line-height: 1.3;
+      border-bottom: 2px solid #8c1515;
+      padding-bottom: 12px;
+    }
+    h2 {
+      font-size: 1.4rem;
+      color: #1a1a1a;
+      margin-top: 36px;
+      margin-bottom: 16px;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 8px;
+    }
+    h3 {
+      font-size: 1.15rem;
+      color: #333;
+      margin-top: 24px;
+      margin-bottom: 12px;
+    }
+    p { margin-bottom: 16px; color: #333; text-align: justify; }
+    ul, ol { margin-bottom: 20px; padding-left: 28px; }
+    li { margin-bottom: 8px; color: #333; }
+    pre {
+      background: #1e1e1e;
+      color: #d4d4d4;
+      padding: 16px;
+      border-radius: 6px;
+      overflow-x: auto;
+      font-family: Consolas, Monaco, "Courier New", monospace;
+      font-size: 0.9rem;
+      line-height: 1.5;
+      margin: 20px 0;
+    }
+    code {
+      background: #f3f4f6;
+      color: #b91c1c;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: Consolas, Monaco, monospace;
+      font-size: 0.88em;
+    }
+    pre code {
+      background: transparent;
+      color: inherit;
+      padding: 0;
+    }
+    blockquote {
+      border-left: 4px solid #8c1515;
+      margin: 20px 0;
+      padding: 12px 20px;
+      background: #fff8f8;
+      color: #555;
+      font-style: italic;
+    }
+    .callout-info {
+      background: #eff6ff;
+      border-left: 4px solid #3b82f6;
+      padding: 14px 18px;
+      border-radius: 0 6px 6px 0;
+      margin: 20px 0;
+      font-size: 0.92rem;
+    }
+    .source-box {
+      background: #f9fafb;
+      border: 1px solid #e5e7eb;
+      border-radius: 6px;
+      padding: 12px 18px;
+      margin-bottom: 30px;
+      font-size: 0.88rem;
+      color: #6b7280;
+    }
+    .source-box a { color: #8c1515; }
+    footer {
+      text-align: center;
+      padding: 24px;
+      color: #9ca3af;
+      font-size: 0.85rem;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <div class="top-bar">
+    <span>CS146S: 现代软件开发者 (Stanford Fall 2025) &bull; 中文知识库</span>
+    <a href="../index_zh.html">&larr; 返回课程大纲导航</a>
+  </div>
+  
+  <div class="container">
+    <div class="category-badge">Week 5 实战案例 / Warp</div>
+    <h1>Warp 内部工程实践：如何用 AI 终端构建下一代 AI 终端</h1>
+    <div class="source-box"><strong>原文出处：</strong> <a href="https://notion.warp.dev/How-Warp-uses-Warp-to-build-Warp-21643263616d81a6b9e3e63fd8a7380c" target="_blank">https://notion.warp.dev/How-Warp-uses-Warp-to-build-Warp-21643263616d81a6b9e3e63fd8a7380c</a></div>
+    
+    <div class="article-content">
+      
+            <h2>1. 自举开发（Dogfooding）的极致实践</h2>
+            <p>Warp 团队揭秘了他们如何利用自家产品 Warp 开发 Warp 本身的完整工程纪实。从日常代码构建、排查 Rust 编译器长报错，到自动化生成 Git PR 描述，AI 已经全面深度内嵌进核心开发环节。</p>
+
+            <h2>2. 核心实战技巧</h2>
+            <ul>
+              <li><strong>终端报错即时修复 (One-click Error Fixing)：</strong> 编译器报错直接关联到 AI 侧边栏，自动解析调用栈并提供一键可执行的修复补丁。</li>
+              <li><strong>团队工作流共享 (Warp Drive)：</strong> 将团队内部高频使用的复合命令与排障脚本沉淀为共享 Workflows，实现团队知识库的自动化分发。</li>
+            </ul>
+            
+    </div>
+  </div>
+
+  <footer>
+    <p>斯坦福大学 CS146S 现代软件开发者课程资料 &bull; 全量精校中文版本</p>
+  </footer>
+</body>
+</html>

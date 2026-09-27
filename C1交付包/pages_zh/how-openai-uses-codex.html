@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OpenAI 官方实录：OpenAI 内部技术团队如何深度使用 Codex - CS146S 中文课程资料</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      line-height: 1.7;
+      color: #222;
+      background: #fafafa;
+      margin: 0;
+      padding: 0;
+    }
+    .top-bar {
+      background: #8c1515;
+      color: white;
+      padding: 12px 24px;
+      font-size: 0.9rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .top-bar a { color: #fff; text-decoration: none; font-weight: 500; }
+    .top-bar a:hover { text-decoration: underline; }
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      background: #fff;
+      padding: 40px 48px;
+      border-radius: 8px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
+    .category-badge {
+      display: inline-block;
+      background: #fdf2f2;
+      color: #8c1515;
+      font-size: 0.8rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 12px;
+    }
+    h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #111;
+      margin-top: 0;
+      margin-bottom: 16px;
+      line-height: 1.3;
+      border-bottom: 2px solid #8c1515;
+      padding-bottom: 12px;
+    }
+    h2 {
+      font-size: 1.4rem;
+      color: #1a1a1a;
+      margin-top: 36px;
+      margin-bottom: 16px;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 8px;
+    }
+    h3 {
+      font-size: 1.15rem;
+      color: #333;
+      margin-top: 24px;
+      margin-bottom: 12px;
+    }
+    p { margin-bottom: 16px; color: #333; text-align: justify; }
+    ul, ol { margin-bottom: 20px; padding-left: 28px; }
+    li { margin-bottom: 8px; color: #333; }
+    pre {
+      background: #1e1e1e;
+      color: #d4d4d4;
+      padding: 16px;
+      border-radius: 6px;
+      overflow-x: auto;
+      font-family: Consolas, Monaco, monospace;
+      font-size: 0.9rem;
+      margin: 20px 0;
+    }
+    code {
+      background: #f3f4f6;
+      color: #b91c1c;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: Consolas, Monaco, monospace;
+      font-size: 0.88em;
+    }
+    blockquote {
+      border-left: 4px solid #8c1515;
+      margin: 20px 0;
+      padding: 12px 20px;
+      background: #fff8f8;
+      color: #555;
+      font-style: italic;
+    }
+    .source-box {
+      background: #f9fafb;
+      border: 1px solid #e5e7eb;
+      border-radius: 6px;
+      padding: 12px 18px;
+      margin-bottom: 30px;
+      font-size: 0.88rem;
+      color: #6b7280;
+    }
+    .source-box a { color: #8c1515; }
+    footer {
+      text-align: center;
+      padding: 24px;
+      color: #9ca3af;
+      font-size: 0.85rem;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <div class="top-bar">
+    <span>CS146S: 现代软件开发者 (Stanford Fall 2025) &bull; 核心学术文献</span>
+    <a href="../index_zh.html">&larr; 返回课程大纲导航</a>
+  </div>
+  
+  <div class="container">
+    <div class="category-badge">Week 1 核心文献 / OpenAI</div>
+    <h1>OpenAI 官方实录：OpenAI 内部技术团队如何深度使用 Codex</h1>
+    <div class="source-box"><strong>本地原版 PDF：</strong> <a href="../pdfs/how-openai-uses-codex.pdf" target="_blank">点击查阅原始高清 PDF 文档 (how-openai-uses-codex.pdf)</a></div>
+    
+    <div class="article-content">
+      
+    <h2>一、执行摘要 (Executive Summary)</h2>
+    <p>OpenAI 官方发布了其内部技术团队使用 Codex 的全景工程实录。报告基于对 OpenAI 内部安全、产品、前端、API、基础设施以及性能工程等数十个部门的深入访谈与埋点数据统计，系统阐述了 Codex 如何将日常工程交付速度提升 2~5 倍，并深度改变了大型复杂单体架构（Monorepo）的演进模式。</p>
+
+    <h2>二、七大工业级实战用例 (Use Cases)</h2>
+    <ol>
+      <li><strong>代码理解与上下文建立 (Code Understanding)：</strong> 新员工入职或在轮值排障（On-Call）面对陌生微服务时，使用 Ask 模式精准定位认证流与跨服务数据追踪路径，耗时由数小时压缩至数分钟。</li>
+      <li><strong>重构与平滑依赖迁移 (Refactoring & Migrations)：</strong> 批量将遗留 Python 同步代码升级为异步协程架构，或跨框架迁移（如 React Class 组件到 Hooks），由 Codex 自主生成差异补丁并校验测试。</li>
+      <li><strong>系统性能调优 (Performance Optimization)：</strong> 自动化识别数据库慢查询 N+1 问题、低效内存分配循环，并提供 SIMD 或并发批处理建议。</li>
+      <li><strong>测试用例覆盖度提升 (Improving Test Coverage)：</strong> 针对没有文档的隐式业务逻辑，根据现有断言逆向推导出高覆盖度的边界回归测试用例。</li>
+      <li><strong>提升端到端交付流速 (Development Velocity)：</strong> 从需求规格直接生成脚手架、路由与数据 Schema 样板代码。</li>
+      <li><strong>保持心流状态 (Staying in Flow)：</strong> 消除查阅语法文档和配置手册引起的上下文切换开销。</li>
+      <li><strong>架构探索与头脑风暴 (Exploration & Ideation)：</strong> 在设计系统方案阶段，让 Codex 快速产出 3 种不同架构选型的利弊原型。</li>
+    </ol>
+
+    <h2>三、OpenAI 团队总结的提示词最佳实践</h2>
+    <ul>
+      <li>在提问时附带完整的错误调用栈和最小可复现用例；</li>
+      <li>明确告知模型“不要修改现有对外公共接口签名”；</li>
+      <li>要求模型以 Diff 格式输出改动，避免生成全文导致的 Token 浪费。</li>
+    </ul>
+    
+    </div>
+  </div>
+
+  <footer>
+    <p>斯坦福大学 CS146S 现代软件开发者课程资料 &bull; 工业级精校中文文献</p>
+  </footer>
+</body>
+</html>

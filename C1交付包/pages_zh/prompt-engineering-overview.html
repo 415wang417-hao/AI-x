@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>提示词工程完全概述与最佳实践指南 - CS146S 中文课程资料</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      line-height: 1.7;
+      color: #222;
+      background: #fafafa;
+      margin: 0;
+      padding: 0;
+    }
+    .top-bar {
+      background: #8c1515;
+      color: white;
+      padding: 12px 24px;
+      font-size: 0.9rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .top-bar a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .top-bar a:hover { text-decoration: underline; }
+    .container {
+      max-width: 880px;
+      margin: 40px auto;
+      background: #fff;
+      padding: 40px 48px;
+      border-radius: 8px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
+    .category-badge {
+      display: inline-block;
+      background: #fdf2f2;
+      color: #8c1515;
+      font-size: 0.8rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 12px;
+    }
+    h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #111;
+      margin-top: 0;
+      margin-bottom: 16px;
+      line-height: 1.3;
+      border-bottom: 2px solid #8c1515;
+      padding-bottom: 12px;
+    }
+    h2 {
+      font-size: 1.4rem;
+      color: #1a1a1a;
+      margin-top: 36px;
+      margin-bottom: 16px;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 8px;
+    }
+    h3 {
+      font-size: 1.15rem;
+      color: #333;
+      margin-top: 24px;
+      margin-bottom: 12px;
+    }
+    p { margin-bottom: 16px; color: #333; text-align: justify; }
+    ul, ol { margin-bottom: 20px; padding-left: 28px; }
+    li { margin-bottom: 8px; color: #333; }
+    pre {
+      background: #1e1e1e;
+      color: #d4d4d4;
+      padding: 16px;
+      border-radius: 6px;
+      overflow-x: auto;
+      font-family: Consolas, Monaco, "Courier New", monospace;
+      font-size: 0.9rem;
+      line-height: 1.5;
+      margin: 20px 0;
+    }
+    code {
+      background: #f3f4f6;
+      color: #b91c1c;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: Consolas, Monaco, monospace;
+      font-size: 0.88em;
+    }
+    pre code {
+      background: transparent;
+      color: inherit;
+      padding: 0;
+    }
+    blockquote {
+      border-left: 4px solid #8c1515;
+      margin: 20px 0;
+      padding: 12px 20px;
+      background: #fff8f8;
+      color: #555;
+      font-style: italic;
+    }
+    .callout-info {
+      background: #eff6ff;
+      border-left: 4px solid #3b82f6;
+      padding: 14px 18px;
+      border-radius: 0 6px 6px 0;
+      margin: 20px 0;
+      font-size: 0.92rem;
+    }
+    .source-box {
+      background: #f9fafb;
+      border: 1px solid #e5e7eb;
+      border-radius: 6px;
+      padding: 12px 18px;
+      margin-bottom: 30px;
+      font-size: 0.88rem;
+      color: #6b7280;
+    }
+    .source-box a { color: #8c1515; }
+    footer {
+      text-align: center;
+      padding: 24px;
+      color: #9ca3af;
+      font-size: 0.85rem;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <div class="top-bar">
+    <span>CS146S: 现代软件开发者 (Stanford Fall 2025) &bull; 中文知识库</span>
+    <a href="../index_zh.html">&larr; 返回课程大纲导航</a>
+  </div>
+  
+  <div class="container">
+    <div class="category-badge">Week 1 课外必读 / Google Cloud</div>
+    <h1>提示词工程完全概述与最佳实践指南</h1>
+    <div class="source-box"><strong>原文出处：</strong> <a href="https://cloud.google.com/discover/what-is-prompt-engineering" target="_blank">https://cloud.google.com/discover/what-is-prompt-engineering</a></div>
+    
+    <div class="article-content">
+      
+            <h2>1. 什么是提示词工程 (Prompt Engineering)</h2>
+            <p><strong>提示词工程（Prompt Engineering）</strong>是构建高质量生成式 AI 应用程序的核心技术学科。它涉及通过结构化设计、措辞优化以及上下文编排，引导大语言模型（LLM）生成最符合预期、准确且可控的输出。随着 LLM 成为现代软件开发的核心组件，提示词工程已从单纯的“提问技巧”演变为一门严谨的软件工程方法论。</p>
+            
+            <h2>2. 核心提示词设计原则</h2>
+            <ul>
+              <li><strong>清晰与具体性 (Clarity & Specificity)：</strong> 避免模糊不清的开放式指令。明确定义输出的角色、任务背景、输入数据、约束条件以及预期的输出格式（如 JSON、Markdown 表格）。</li>
+              <li><strong>上下文设定与角色赋予 (Persona Prompting)：</strong> 通过预设角色（如“你是一位精通安全审计的资深全栈工程师”），显著提升模型在特定领域的专业术语使用准确度与推理严密性。</li>
+              <li><strong>分步骤推理与思维链 (Chain of Thought, CoT)：</strong> 要求模型在给出最终结论前“逐步思考（Think step-by-step）”，将复杂的逻辑分解为原子推导步骤，有效遏制幻觉。</li>
+            </ul>
+
+            <h2>3. 提示词的主要模式与技术演进</h2>
+            <h3>3.1 零样本提示 (Zero-shot Prompting)</h3>
+            <p>直接向模型输入任务描述而无需提供任何参考示例。适用于模型通识能力强、规则简单明确的标准任务：</p>
+            <pre><code>请将以下 Python 代码片段重构为异步 async/await 模式，并添加异常捕获：
+[代码片段]</code></pre>
+
+            <h3>3.2 少样本提示 (Few-shot Prompting)</h3>
+            <p>在提示词中包含 2~5 个具有代表性的“输入-输出”范例，引导模型遵循特定的输出模式、字段命名规范或行业特定风格：</p>
+            <pre><code>输入: 修复 CVE-2025-1029 漏洞
+提交信息规范: fix(security): resolve CVE-2025-1029 in auth-middleware
+
+输入: 升级 React 依赖到 v19
+提交信息规范: chore(deps): bump react from 18.2 to 19.0
+
+输入: 优化数据库查询分页性能
+提交信息规范: perf(db): optimize cursor pagination query</code></pre>
+
+            <h2>4. 现代软件开发者的提示词工程工具流</h2>
+            <p>在现代软件工程实践中，提示词不是随意写在聊天窗口中的，而是作为代码资产进行版本管理与自动化评测：</p>
+            <ul>
+              <li><strong>参数化模板系统：</strong> 使用 Jinja2 或 Mustache 将系统指令与动态上下文解耦。</li>
+              <li><strong>确定性输出保障：</strong> 强制采用结构化输出（JSON Schema 或 Function Calling），确保下游解析器 100% 稳定运行。</li>
+              <li><strong>自动化质量回归测试：</strong> 每次修改 Prompt 时，通过固定的测试用例集评估回答准确率与 Token 消耗波动。</li>
+            </ul>
+            
+    </div>
+  </div>
+
+  <footer>
+    <p>斯坦福大学 CS146S 现代软件开发者课程资料 &bull; 全量精校中文版本</p>
+  </footer>
+</body>
+</html>

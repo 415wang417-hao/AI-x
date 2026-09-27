@@ -1,0 +1,349 @@
+{
+  "summary": {
+    "total_files_audited": 56,
+    "integrity_pass_rate": "100.0%",
+    "link_validity_rate": "100.0%",
+    "average_glossary_adherence": "100.0%",
+    "overall_status": "PASSED"
+  },
+  "files_audited": {
+    "pages_zh/agentic-ai-threats.html": {
+      "integrity_pass": true,
+      "links_pass": true,
+      "glossary_score": 100.0,
+      "terms_found_count": 2
+    },
+    "pages_zh/ai-assisted-code-review-assessment.html": {
+      "integrity_pass": true,
+      "links_pass": true,
+      "glossary_score": 100.0,
+      "terms_found_count": 1
+    },
+    "pages_zh/ai-code-review-best-practices.html": {
+      "integrity_pass": true,
+      "links_pass": true,
+      "glossary_score": 100.0,
+      "terms_found_count": 1
+    },
+    "pages_zh/benefits-agentic-ai-oncall.html": {
+      "integrity_pass": true,
+      "links_pass": true,
+      "glossary_score": 100.0,
+      "terms_found_count": 2
+    },
+    "pages_zh/claude-code-best-practices.html": {
+      "integrity_pass": true,
+      "links_pass": true,
+      "glossary_score": 100.0,
+      "terms_found_count": 3
+    },
+    "pages_zh/code-review-essentials.html": {
+      "integrity_pass": true,
+      "links_pass": true,
+      "glossary_score": 100.0,
+      "terms_found_count": 1
+    },
+    "pages_zh/code-reviews-just-do-it.html": {
+      "integrity_pass": true,
+      "links_pass": true,
+      "glossary_score": 100.0,
+      "terms_found_count": 1
+    },
+    "pages_zh/context-rot.html": {
+      "integrity_pass": true,
+      "links_pass": true,
+      "glossary_score": 100.0,
+      "terms_found_count": 4
+    },
+    "pages_zh/copilot-prompt-injection-rce.html": {
+      "integrity_pass": true,
+      "links_pass": true,
+      "glossary_score": 100.0,
+      "terms_found_count": 3
+    },
+    "pages_zh/devin-coding-agents-101.html": {
+      "integrity_pass": true,
+      "links_pass": true,
+      "glossary_score": 100.0,
+      "terms_found_count": 3
+    },
+    "pages_zh/finding-vulnerabilities-claude-codex.html": {
+      "integrity_pass": true,
+      "links_pass": true,
+      "glossary_score": 100.0,
+      "terms_found_count": 1
+    },
+    "pages_zh/good-context-good-code.html": {
+      "integrity_pass": true,
+      "links_pass": true,
+      "glossary_score": 100.0,
+      "terms_found_count": 1
+    },
+    "pages_zh/how-anthropic-uses-claude-code.html": {
+      "integrity_pass": true,
+      "links_pass": true,
+      "glossary_score": 100.0,
+      "terms_found_count": 1
+    },
+    "pages_zh/how-long-contexts-fail.html": {
+      "integrity_pass": true,
+      "links_pass": true,
+      "glossary_score": 100.0,
+      "terms_found_count": 2
+    },
+    "pages_zh/how-openai-uses-codex.html": {
+      "integrity_pass": true,
+      "links_pass": true,
+      "glossary_score": 100.0,
+      "terms_found_count": 2
+    },
+    "pages_zh/how-to-review-code-effectively.html": {
+      "integrity_pass": true,
+      "links_pass": true,
+      "glossary_score": 100.0,
+      "terms_found_count": 1
+    },
+    "pages_zh/how-warp-uses-warp.html": {
+      "integrity_pass": true,
+      "links_pass": true,
+      "glossary_score": 100.0,
+      "terms_found_count": 1
+    },
+    "pages_zh/kubernetes-troubleshooting-ai.html": {
+      "integrity_pass": true,
+      "links_pass": true,
+      "glossary_score": 100.0,
+      "terms_found_count": 1
+    },
+    "pages_zh/lessons-from-ai-code-reviews.html": {
+      "integrity_pass": true,
+      "links_pass": true,
+      "glossary_score": 100.0,
+      "terms_found_count": 2
+    },
+    "pages_zh/mcp-food-for-thought.html": {
+      "integrity_pass": true,
+      "links_pass": true,
+      "glossary_score": 100.0,
+      "terms_found_count": 4
+    },
+    "pages_zh/mcp-introduction.html": {
+      "integrity_pass": true,
+      "links_pass": true,
+      "glossary_score": 100.0,
+      "terms_found_count": 4
+    },
+    "pages_zh/mcp-registry-preview.html": {
+      "integrity_pass": true,
+      "links_pass": true,
+      "glossary_score": 100.0,
+      "terms_found_count": 4
+    },
+    "pages_zh/mcp-server-authentication.html": {
+      "integrity_pass": true,
+      "links_pass": true,
+      "glossary_score": 100.0,
+      "terms_found_count": 4
+    },
+    "pages_zh/multi-agent-systems-ai-native.html": {
+      "integrity_pass": true,
+      "links_pass": true,
+      "glossary_score": 100.0,
+      "terms_found_count": 5
+    },
+    "pages_zh/observability-basics.html": {
+      "integrity_pass": true,
+      "links_pass": true,
+      "glossary_score": 100.0,
+      "terms_found_count": 2
+    },
+    "pages_zh/owasp-top-ten.html": {
+      "integrity_pass": true,
+      "links_pass": true,
+      "glossary_score": 100.0,
+      "terms_found_count": 3
+    },
+    "pages_zh/peeking-under-the-hood-of-claude-code.html": {
+      "integrity_pass": true,
+      "links_pass": true,
+      "glossary_score": 100.0,
+      "terms_found_count": 2
+    },
+    "pages_zh/prompt-engineering-guide.html": {
+      "integrity_pass": true,
+      "links_pass": true,
+      "glossary_score": 100.0,
+      "terms_found_count": 4
+    },
+    "pages_zh/prompt-engineering-overview.html": {
+      "integrity_pass": true,
+      "links_pass": true,
+      "glossary_score": 100.0,
+      "terms_found_count": 5
+    },
+    "pages_zh/sast-vs-dast.html": {
+      "integrity_pass": true,
+      "links_pass": true,
+      "glossary_score": 100.0,
+      "terms_found_count": 3
+    },
+    "pages_zh/specs-are-the-new-source-code.html": {
+      "integrity_pass": true,
+      "links_pass": true,
+      "glossary_score": 100.0,
+      "terms_found_count": 4
+    },
+    "pages_zh/sre-introduction.html": {
+      "integrity_pass": true,
+      "links_pass": true,
+      "glossary_score": 100.0,
+      "terms_found_count": 2
+    },
+    "pages_zh/warp-vs-claude-code.html": {
+      "integrity_pass": true,
+      "links_pass": true,
+      "glossary_score": 100.0,
+      "terms_found_count": 2
+    },
+    "pages_zh/writing-effective-tools-for-agents.html": {
+      "integrity_pass": true,
+      "links_pass": true,
+      "glossary_score": 100.0,
+      "terms_found_count": 2
+    },
+    "slides_zh/week1_1.1_guide.html": {
+      "integrity_pass": true,
+      "links_pass": true,
+      "glossary_score": 100.0,
+      "terms_found_count": 1
+    },
+    "slides_zh/week1_1.2_guide.html": {
+      "integrity_pass": true,
+      "links_pass": true,
+      "glossary_score": 100.0,
+      "terms_found_count": 3
+    },
+    "slides_zh/week2_2.1_guide.html": {
+      "integrity_pass": true,
+      "links_pass": true,
+      "glossary_score": 100.0,
+      "terms_found_count": 3
+    },
+    "slides_zh/week2_2.2_guide.html": {
+      "integrity_pass": true,
+      "links_pass": true,
+      "glossary_score": 100.0,
+      "terms_found_count": 3
+    },
+    "slides_zh/week3_3.1_guide.html": {
+      "integrity_pass": true,
+      "links_pass": true,
+      "glossary_score": 100.0,
+      "terms_found_count": 2
+    },
+    "slides_zh/week3_3.2_guide.html": {
+      "integrity_pass": true,
+      "links_pass": true,
+      "glossary_score": 100.0,
+      "terms_found_count": 1
+    },
+    "slides_zh/week4_4.1_guide.html": {
+      "integrity_pass": true,
+      "links_pass": true,
+      "glossary_score": 100.0,
+      "terms_found_count": 2
+    },
+    "slides_zh/week4_4.2_guide.html": {
+      "integrity_pass": true,
+      "links_pass": true,
+      "glossary_score": 100.0,
+      "terms_found_count": 2
+    },
+    "slides_zh/week5_5.1_guide.html": {
+      "integrity_pass": true,
+      "links_pass": true,
+      "glossary_score": 100.0,
+      "terms_found_count": 3
+    },
+    "slides_zh/week6_6.1_guide.html": {
+      "integrity_pass": true,
+      "links_pass": true,
+      "glossary_score": 100.0,
+      "terms_found_count": 5
+    },
+    "slides_zh/week7_7.1_guide.html": {
+      "integrity_pass": true,
+      "links_pass": true,
+      "glossary_score": 100.0,
+      "terms_found_count": 1
+    },
+    "slides_zh/week7_7.2_guide.html": {
+      "integrity_pass": true,
+      "links_pass": true,
+      "glossary_score": 100.0,
+      "terms_found_count": 2
+    },
+    "slides_zh/week8_8.1_guide.html": {
+      "integrity_pass": true,
+      "links_pass": true,
+      "glossary_score": 100.0,
+      "terms_found_count": 2
+    },
+    "slides_zh/week9_9.1_guide.html": {
+      "integrity_pass": true,
+      "links_pass": true,
+      "glossary_score": 100.0,
+      "terms_found_count": 5
+    },
+    "assignments_zh/week1_assignment_zh.html": {
+      "integrity_pass": true,
+      "links_pass": true,
+      "glossary_score": 100.0,
+      "terms_found_count": 2
+    },
+    "assignments_zh/week2_assignment_zh.html": {
+      "integrity_pass": true,
+      "links_pass": true,
+      "glossary_score": 100.0,
+      "terms_found_count": 3
+    },
+    "assignments_zh/week3_assignment_zh.html": {
+      "integrity_pass": true,
+      "links_pass": true,
+      "glossary_score": 100.0,
+      "terms_found_count": 4
+    },
+    "assignments_zh/week4_assignment_zh.html": {
+      "integrity_pass": true,
+      "links_pass": true,
+      "glossary_score": 100.0,
+      "terms_found_count": 1
+    },
+    "assignments_zh/week5_assignment_zh.html": {
+      "integrity_pass": true,
+      "links_pass": true,
+      "glossary_score": 100.0,
+      "terms_found_count": 1
+    },
+    "assignments_zh/week6_assignment_zh.html": {
+      "integrity_pass": true,
+      "links_pass": true,
+      "glossary_score": 100.0,
+      "terms_found_count": 2
+    },
+    "assignments_zh/week7_assignment_zh.html": {
+      "integrity_pass": true,
+      "links_pass": true,
+      "glossary_score": 100.0,
+      "terms_found_count": 2
+    },
+    "assignments_zh/week8_assignment_zh.html": {
+      "integrity_pass": true,
+      "links_pass": true,
+      "glossary_score": 100.0,
+      "terms_found_count": 1
+    }
+  },
+  "broken_links": [],
+  "integrity_errors": []
+}

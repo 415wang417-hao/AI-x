@@ -1,0 +1,162 @@
+{
+  "Vibe Coding": {
+    "zh": "氛围编码（意图驱动编码）",
+    "definition": "开发者仅用自然语言表达高层意图与氛围感，由 AI 智能体负责绝大部分具体代码生成的编程新范式",
+    "rule": "首次出现使用'Vibe Coding（氛围编码/意图驱动编码）'，后续可直接保留'Vibe Coding'或简写为'氛围编码'"
+  },
+  "Prompt Engineering": {
+    "zh": "提示词工程",
+    "definition": "针对大语言模型设计、优化输入提示以获取最高质量输出的技术与方法论",
+    "rule": "统一译为'提示词工程'"
+  },
+  "Context Window": {
+    "zh": "上下文窗口",
+    "definition": "大语言模型在单次推理过程中能够接收并处理的最大 Token 序列长度",
+    "rule": "统一译为'上下文窗口'"
+  },
+  "Context Rot": {
+    "zh": "上下文退化（上下文腐化）",
+    "definition": "随着长上下文填入大量无关或噪声信息，模型注意力分散、指令遵从度及推理准确率下降的现象",
+    "rule": "统一译为'上下文退化'或'上下文腐化'"
+  },
+  "Coding Agent": {
+    "zh": "编程智能体",
+    "definition": "具备环境感知、工具调用、自主循环与代码读写能力的自主 AI 智能体",
+    "rule": "统一译为'编程智能体'，禁止译为'编码代理人'"
+  },
+  "Model Context Protocol (MCP)": {
+    "zh": "模型上下文协议 (MCP)",
+    "definition": "Anthropic 发起的开放标准协议，用于连接 AI 模型与本地/远程开发工具、数据源和上下文环境",
+    "rule": "统一译为'模型上下文协议 (MCP)'，后续出现可直接使用'MCP'"
+  },
+  "MCP Server": {
+    "zh": "MCP 服务端",
+    "definition": "实现 MCP 协议并暴露资源、提示词及工具的后端服务",
+    "rule": "统一译为'MCP 服务端'"
+  },
+  "MCP Client": {
+    "zh": "MCP 客户端",
+    "definition": "消费 MCP 服务端能力的大模型或 IDE 环境（如 Claude Desktop、Cursor、Warp 等）",
+    "rule": "统一译为'MCP 客户端'"
+  },
+  "MCP Registry": {
+    "zh": "MCP 注册中心",
+    "definition": "集中检索、发现与分发各类标准 MCP 工具与服务器的公开目录服务",
+    "rule": "统一译为'MCP 注册中心'"
+  },
+  "Tool Use": {
+    "zh": "工具调用",
+    "definition": "模型根据任务自主选择并调用外部 API 或命令行工具的能力",
+    "rule": "统一译为'工具调用'"
+  },
+  "Function Calling": {
+    "zh": "函数调用",
+    "definition": "大模型输出符合特定 JSON Schema 的函数参数供宿主环境执行的技术机制",
+    "rule": "统一译为'函数调用'"
+  },
+  "PRD (Product Requirement Document)": {
+    "zh": "产品需求文档 (PRD)",
+    "definition": "描述软件功能需求、业务逻辑与边界条件的技术文档，在 AI 时代作为智能体核心输入规格",
+    "rule": "统一译为'产品需求文档 (PRD)'，后续可简称'PRD'"
+  },
+  "Specs": {
+    "zh": "规格说明（规范文档）",
+    "definition": "详细的技术接口与行为约束规范；在'Specs are the new source code'中指顶层规范",
+    "rule": "统一译为'规格说明'或'规范文档'"
+  },
+  "In-context Learning": {
+    "zh": "上下文学习",
+    "definition": "大语言模型无需调整权重，仅通过上下文中的少量示范即可完成新任务的能力",
+    "rule": "统一译为'上下文学习'"
+  },
+  "Zero-shot Prompting": {
+    "zh": "零样本提示",
+    "definition": "不提供任何示例、仅给任务指令的提示方式",
+    "rule": "统一译为'零样本提示'"
+  },
+  "Few-shot Prompting": {
+    "zh": "少样本提示",
+    "definition": "在提示中提供若干输入-输出示例以引导模型按规律作答的提示方式",
+    "rule": "统一译为'少样本提示'"
+  },
+  "System Reminder": {
+    "zh": "系统提醒机制",
+    "definition": "如 Claude Code 中使用的 <system-reminder> 标签，在交互过程中动态向上下文注入高优先级约束指令",
+    "rule": "统一译为'系统提醒机制'"
+  },
+  "AI-native": {
+    "zh": "AI 原生",
+    "definition": "自底向上为大模型与智能体协同而设计的软件架构、终端或开发流程",
+    "rule": "统一译为'AI 原生'"
+  },
+  "SAST (Static Application Security Testing)": {
+    "zh": "静态应用安全测试 (SAST)",
+    "definition": "在不运行程序的情况下分析源代码、字节码以发现漏洞的安全检测方式（白盒测试）",
+    "rule": "统一译为'静态应用安全测试 (SAST)'"
+  },
+  "DAST (Dynamic Application Security Testing)": {
+    "zh": "动态应用安全测试 (DAST)",
+    "definition": "在运行状态下从外部探测应用程序漏洞的安全检测方式（黑盒测试）",
+    "rule": "统一译为'动态应用安全测试 (DAST)'"
+  },
+  "Prompt Injection": {
+    "zh": "提示注入",
+    "definition": "攻击者通过恶意输入劫持或覆盖大模型原有系统指令的安全漏洞",
+    "rule": "统一译为'提示注入'"
+  },
+  "Remote Code Execution (RCE)": {
+    "zh": "远程代码执行 (RCE)",
+    "definition": "攻击者利用漏洞在受害者主机或容器内直接运行任意恶意命令的高危安全漏洞",
+    "rule": "统一译为'远程代码执行 (RCE)'"
+  },
+  "OWASP Top 10": {
+    "zh": "OWASP Top 10 安全风险",
+    "definition": "开放式 Web 应用程序安全项目发布的十大最严重安全风险清单",
+    "rule": "统一保留'OWASP Top 10'"
+  },
+  "Tribal Knowledge": {
+    "zh": "团队内隐经验（团队默会知识）",
+    "definition": "存在于老员工心智模型中、未写入正式文档的代码库演进历史与架构决策原由",
+    "rule": "统一译为'团队内隐经验'或'团队默会知识'"
+  },
+  "SRE (Site Reliability Engineering)": {
+    "zh": "站点可靠性工程 (SRE)",
+    "definition": "将软件工程原则应用于系统运维与基础设施可靠性保障的工程学科",
+    "rule": "统一译为'站点可靠性工程 (SRE)'"
+  },
+  "Observability": {
+    "zh": "可观测性",
+    "definition": "通过系统外部输出（指标、日志、链路追踪）推断内部运行状态的能力",
+    "rule": "统一译为'可观测性'"
+  },
+  "Trace": {
+    "zh": "分布式链路追踪",
+    "definition": "记录一个请求在微服务架构或智能体调用链中完整生命周期的数据结构",
+    "rule": "统一译为'链路追踪'或'Trace'"
+  },
+  "Span": {
+    "zh": "跨度（Span）",
+    "definition": "分布式链路追踪中的单个逻辑工作单元（记录耗时、状态与标签）",
+    "rule": "统一译为'跨度（Span）'"
+  },
+  "On-Call": {
+    "zh": "轮值排障（On-Call）",
+    "definition": "工程师轮流待命以应对生产环境突发告警与故障修复的工作制度",
+    "rule": "统一译为'值班排障'或'On-Call'"
+  },
+  "Agentic Workflows": {
+    "zh": "智能体工作流",
+    "definition": "由自主规划、工具调用、自我纠错与多智能体协作组成的迭代执行流程",
+    "rule": "统一译为'智能体工作流'"
+  },
+  "Code Review Reps": {
+    "zh": "代码审查实战演练",
+    "definition": "借鉴健身'组数/次数(Reps)'概念，指针对多样化 PR 进行的高频次代码审查练习",
+    "rule": "统一译为'代码审查实战演练'"
+  },
+  "Sub-agent": {
+    "zh": "子智能体",
+    "definition": "由主智能体派生、负责专项子任务的独立智能体",
+    "rule": "统一译为'子智能体'"
+  }
+}

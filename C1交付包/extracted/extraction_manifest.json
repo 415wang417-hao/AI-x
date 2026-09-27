@@ -1,0 +1,206 @@
+{
+  "agentic-ai-threats.html": {
+    "type": "html_article",
+    "extracted_md": "C:\\Users\\lenovo\\Desktop\\CS146S_offline\\extracted\\agentic-ai-threats.md",
+    "char_count": 33149,
+    "chunk_count": 4
+  },
+  "ai-code-review-best-practices.html": {
+    "type": "html_article",
+    "extracted_md": "C:\\Users\\lenovo\\Desktop\\CS146S_offline\\extracted\\ai-code-review-best-practices.md",
+    "char_count": 12874,
+    "chunk_count": 2
+  },
+  "benefits-agentic-ai-oncall.html": {
+    "type": "html_article",
+    "extracted_md": "C:\\Users\\lenovo\\Desktop\\CS146S_offline\\extracted\\benefits-agentic-ai-oncall.md",
+    "char_count": 75,
+    "chunk_count": 1
+  },
+  "claude-code-best-practices.html": {
+    "type": "html_article",
+    "extracted_md": "C:\\Users\\lenovo\\Desktop\\CS146S_offline\\extracted\\claude-code-best-practices.md",
+    "char_count": 3392,
+    "chunk_count": 1
+  },
+  "code-review-essentials.html": {
+    "type": "html_article",
+    "extracted_md": "C:\\Users\\lenovo\\Desktop\\CS146S_offline\\extracted\\code-review-essentials.md",
+    "char_count": 57,
+    "chunk_count": 1
+  },
+  "code-reviews-just-do-it.html": {
+    "type": "html_article",
+    "extracted_md": "C:\\Users\\lenovo\\Desktop\\CS146S_offline\\extracted\\code-reviews-just-do-it.md",
+    "char_count": 6509,
+    "chunk_count": 1
+  },
+  "context-rot.html": {
+    "type": "html_article",
+    "extracted_md": "C:\\Users\\lenovo\\Desktop\\CS146S_offline\\extracted\\context-rot.md",
+    "char_count": 53981,
+    "chunk_count": 7
+  },
+  "copilot-prompt-injection-rce.html": {
+    "type": "html_article",
+    "extracted_md": "C:\\Users\\lenovo\\Desktop\\CS146S_offline\\extracted\\copilot-prompt-injection-rce.md",
+    "char_count": 7444,
+    "chunk_count": 1
+  },
+  "devin-coding-agents-101.html": {
+    "type": "html_article",
+    "extracted_md": "C:\\Users\\lenovo\\Desktop\\CS146S_offline\\extracted\\devin-coding-agents-101.md",
+    "char_count": 21311,
+    "chunk_count": 3
+  },
+  "finding-vulnerabilities-claude-codex.html": {
+    "type": "html_article",
+    "extracted_md": "C:\\Users\\lenovo\\Desktop\\CS146S_offline\\extracted\\finding-vulnerabilities-claude-codex.md",
+    "char_count": 35778,
+    "chunk_count": 5
+  },
+  "good-context-good-code.html": {
+    "type": "html_article",
+    "extracted_md": "C:\\Users\\lenovo\\Desktop\\CS146S_offline\\extracted\\good-context-good-code.md",
+    "char_count": 22,
+    "chunk_count": 1
+  },
+  "how-long-contexts-fail.html": {
+    "type": "html_article",
+    "extracted_md": "C:\\Users\\lenovo\\Desktop\\CS146S_offline\\extracted\\how-long-contexts-fail.md",
+    "char_count": 11824,
+    "chunk_count": 2
+  },
+  "how-to-review-code-effectively.html": {
+    "type": "html_article",
+    "extracted_md": "C:\\Users\\lenovo\\Desktop\\CS146S_offline\\extracted\\how-to-review-code-effectively.md",
+    "char_count": 121,
+    "chunk_count": 1
+  },
+  "how-warp-uses-warp.html": {
+    "type": "html_article",
+    "extracted_md": "C:\\Users\\lenovo\\Desktop\\CS146S_offline\\extracted\\how-warp-uses-warp.md",
+    "char_count": 8,
+    "chunk_count": 1
+  },
+  "kubernetes-troubleshooting-ai.html": {
+    "type": "html_article",
+    "extracted_md": "C:\\Users\\lenovo\\Desktop\\CS146S_offline\\extracted\\kubernetes-troubleshooting-ai.md",
+    "char_count": 42,
+    "chunk_count": 1
+  },
+  "lessons-from-ai-code-reviews.html": {
+    "type": "html_article",
+    "extracted_md": "C:\\Users\\lenovo\\Desktop\\CS146S_offline\\extracted\\lessons-from-ai-code-reviews.md",
+    "char_count": 2744,
+    "chunk_count": 1
+  },
+  "mcp-food-for-thought.html": {
+    "type": "html_article",
+    "extracted_md": "C:\\Users\\lenovo\\Desktop\\CS146S_offline\\extracted\\mcp-food-for-thought.md",
+    "char_count": 4439,
+    "chunk_count": 1
+  },
+  "mcp-introduction.html": {
+    "type": "html_article",
+    "extracted_md": "C:\\Users\\lenovo\\Desktop\\CS146S_offline\\extracted\\mcp-introduction.md",
+    "char_count": 31379,
+    "chunk_count": 4
+  },
+  "mcp-registry-preview.html": {
+    "type": "html_article",
+    "extracted_md": "C:\\Users\\lenovo\\Desktop\\CS146S_offline\\extracted\\mcp-registry-preview.md",
+    "char_count": 5354,
+    "chunk_count": 1
+  },
+  "mcp-server-authentication.html": {
+    "type": "html_article",
+    "extracted_md": "C:\\Users\\lenovo\\Desktop\\CS146S_offline\\extracted\\mcp-server-authentication.md",
+    "char_count": 18979,
+    "chunk_count": 2
+  },
+  "multi-agent-systems-ai-native.html": {
+    "type": "html_article",
+    "extracted_md": "C:\\Users\\lenovo\\Desktop\\CS146S_offline\\extracted\\multi-agent-systems-ai-native.md",
+    "char_count": 72,
+    "chunk_count": 1
+  },
+  "observability-basics.html": {
+    "type": "html_article",
+    "extracted_md": "C:\\Users\\lenovo\\Desktop\\CS146S_offline\\extracted\\observability-basics.md",
+    "char_count": 10496,
+    "chunk_count": 1
+  },
+  "owasp-top-ten.html": {
+    "type": "html_article",
+    "extracted_md": "C:\\Users\\lenovo\\Desktop\\CS146S_offline\\extracted\\owasp-top-ten.md",
+    "char_count": 16629,
+    "chunk_count": 2
+  },
+  "peeking-under-the-hood-of-claude-code.html": {
+    "type": "html_article",
+    "extracted_md": "C:\\Users\\lenovo\\Desktop\\CS146S_offline\\extracted\\peeking-under-the-hood-of-claude-code.md",
+    "char_count": 2456,
+    "chunk_count": 1
+  },
+  "prompt-engineering-guide.html": {
+    "type": "html_article",
+    "extracted_md": "C:\\Users\\lenovo\\Desktop\\CS146S_offline\\extracted\\prompt-engineering-guide.md",
+    "char_count": 403,
+    "chunk_count": 1
+  },
+  "prompt-engineering-overview.html": {
+    "type": "html_article",
+    "extracted_md": "C:\\Users\\lenovo\\Desktop\\CS146S_offline\\extracted\\prompt-engineering-overview.md",
+    "char_count": 23494,
+    "chunk_count": 3
+  },
+  "sast-vs-dast.html": {
+    "type": "html_article",
+    "extracted_md": "C:\\Users\\lenovo\\Desktop\\CS146S_offline\\extracted\\sast-vs-dast.md",
+    "char_count": 18358,
+    "chunk_count": 2
+  },
+  "specs-are-the-new-source-code.html": {
+    "type": "html_article",
+    "extracted_md": "C:\\Users\\lenovo\\Desktop\\CS146S_offline\\extracted\\specs-are-the-new-source-code.md",
+    "char_count": 14605,
+    "chunk_count": 2
+  },
+  "sre-introduction.html": {
+    "type": "html_article",
+    "extracted_md": "C:\\Users\\lenovo\\Desktop\\CS146S_offline\\extracted\\sre-introduction.md",
+    "char_count": 26379,
+    "chunk_count": 4
+  },
+  "warp-vs-claude-code.html": {
+    "type": "html_article",
+    "extracted_md": "C:\\Users\\lenovo\\Desktop\\CS146S_offline\\extracted\\warp-vs-claude-code.md",
+    "char_count": 5530,
+    "chunk_count": 1
+  },
+  "writing-effective-tools-for-agents.html": {
+    "type": "html_article",
+    "extracted_md": "C:\\Users\\lenovo\\Desktop\\CS146S_offline\\extracted\\writing-effective-tools-for-agents.md",
+    "char_count": 20787,
+    "chunk_count": 3
+  },
+  "ai-assisted-code-review-assessment.pdf": {
+    "type": "pdf_document",
+    "extracted_md": "C:\\Users\\lenovo\\Desktop\\CS146S_offline\\extracted\\ai-assisted-code-review-assessment.md",
+    "char_count": 53274,
+    "chunk_count": 5
+  },
+  "how-anthropic-uses-claude-code.pdf": {
+    "type": "pdf_document",
+    "extracted_md": "C:\\Users\\lenovo\\Desktop\\CS146S_offline\\extracted\\how-anthropic-uses-claude-code.md",
+    "char_count": 75219,
+    "chunk_count": 7
+  },
+  "how-openai-uses-codex.pdf": {
+    "type": "pdf_document",
+    "extracted_md": "C:\\Users\\lenovo\\Desktop\\CS146S_offline\\extracted\\how-openai-uses-codex.md",
+    "char_count": 13002,
+    "chunk_count": 2
+  }
+}

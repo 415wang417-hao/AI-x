@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AI-Powered Entomology: Lessons from Millions of AI Code Reviews</title>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; line-height: 1.6; max-width: 860px; margin: 40px auto; padding: 0 20px; color: #222; }
+    h1 { color: #8c1515; border-bottom: 2px solid #8c1515; padding-bottom: 10px; }
+    h2 { color: #333; margin-top: 30px; border-bottom: 1px solid #eee; padding-bottom: 6px; }
+    .badge { background: #eef2ff; color: #4338ca; padding: 4px 10px; border-radius: 6px; font-weight: 600; font-size: 0.85em; }
+    .meta { color: #666; margin-bottom: 24px; font-size: 0.9em; }
+    blockquote { border-left: 4px solid #8c1515; margin: 20px 0; padding: 10px 20px; background: #fafafa; color: #444; }
+    ul { padding-left: 24px; }
+    li { margin: 8px 0; }
+  </style>
+</head>
+<body>
+  <h1>AI-Powered Entomology: Lessons from Millions of AI Code Reviews</h1>
+  <div class="meta">
+    <span class="badge">Graphite Deep Dive</span>
+    <strong>Speaker:</strong> Tomas Reimers (Co-Founder & CPO, Graphite) | 
+    <strong>Event:</strong> AI Engineer World's Fair 2025 |
+    <strong>Video:</strong> <a href="https://www.youtube.com/watch?v=TswQeKftnaw" target="_blank">YouTube Talk Link</a>
+  </div>
+  
+  <h2>1. The "Entomology" Metaphor: Bugs in the AI Era</h2>
+  <p>Software bugs are no longer solely written by human hands. As AI agents write an increasingly large portion of production code, the velocity of code authoring has outpaced traditional human review bandwidth. Tomas Reimers presents "AI-Powered Entomology"—treating code review defects as biological specimens that need systematic classification, taxonomy, and targeted eradication.</p>
+  
+  <h2>2. The Two Axes of Effective AI Feedback: Reliability vs. Reception</h2>
+  <p>Graphite's engineering team discovered that high model accuracy alone does not make an AI code review tool successful. Feedback must be evaluated across two critical dimensions:</p>
+  <ul>
+    <li><strong>Reliability:</strong> Can the AI model deterministically and accurately spot the issue without hallucinations?</li>
+    <li><strong>Reception:</strong> Do developers actually <em>want</em> and <em>appreciate</em> this feedback from an AI reviewer, or does it trigger cognitive fatigue?</li>
+  </ul>
+  
+  <h2>3. What AI Code Review Is Excellent At</h2>
+  <ul>
+    <li><strong>Logic & Boundary Bugs:</strong> Off-by-one errors, missing nil/null checks, and concurrency race conditions.</li>
+    <li><strong>Accidentally Committed Code:</strong> Hardcoded test secrets, leftover debug logs, and unfinished placeholder logic.</li>
+    <li><strong>Security & Performance Red Flags:</strong> SQL injection patterns, unindexed database queries, and redundant network roundtrips.</li>
+  </ul>
+  
+  <h2>4. What Human Developers Hate from AI</h2>
+  <blockquote>"Nothing kills developer trust faster than an AI nitpicking style while missing a critical production regression."</blockquote>
+  <p>Subjective feedback on "code cleanliness", such as requesting function extractions, renaming local variables to suit stylistic preferences, or demanding additional comments, consistently receives high downvote rates. Developers perceive this as pedantic noise that blocks merge velocity.</p>
+  
+  <h2>5. The Final Frontier: Tribal Knowledge</h2>
+  <p>The hardest challenge for AI code review agents is <strong>Tribal Knowledge</strong> (团队内隐经验). This refers to unwritten institutional context: why a certain bespoke pattern was chosen five years ago, architectural trade-offs specific to the organization's legacy systems, or undocumented external service idiosyncrasies. Until agents can effectively index organizational history, human reviewers remain indispensable for architectural sign-offs.</p>
+  
+  <h2>6. Key Metrics for AI Review Agents</h2>
+  <p>Graphite gauges review quality not through token volume or comment count, but through:</p>
+  <ul>
+    <li><strong>Action Rate:</strong> Percentage of AI comments that directly result in code edits before merge.</li>
+    <li><strong>Downvote / Dismissal Rate:</strong> Kept strictly below 5% to maintain long-term developer trust.</li>
+    <li><strong>Time to Merge:</strong> AI review should compress, rather than elongate, PR cycle time.</li>
+  </ul>
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>权威学术评估：现代代码审查中 AI 辅助编码实践的实证效能与边界 - CS146S 中文课程资料</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      line-height: 1.7;
+      color: #222;
+      background: #fafafa;
+      margin: 0;
+      padding: 0;
+    }
+    .top-bar {
+      background: #8c1515;
+      color: white;
+      padding: 12px 24px;
+      font-size: 0.9rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .top-bar a { color: #fff; text-decoration: none; font-weight: 500; }
+    .top-bar a:hover { text-decoration: underline; }
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      background: #fff;
+      padding: 40px 48px;
+      border-radius: 8px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
+    .category-badge {
+      display: inline-block;
+      background: #fdf2f2;
+      color: #8c1515;
+      font-size: 0.8rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 12px;
+    }
+    h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #111;
+      margin-top: 0;
+      margin-bottom: 16px;
+      line-height: 1.3;
+      border-bottom: 2px solid #8c1515;
+      padding-bottom: 12px;
+    }
+    h2 {
+      font-size: 1.4rem;
+      color: #1a1a1a;
+      margin-top: 36px;
+      margin-bottom: 16px;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 8px;
+    }
+    h3 {
+      font-size: 1.15rem;
+      color: #333;
+      margin-top: 24px;
+      margin-bottom: 12px;
+    }
+    p { margin-bottom: 16px; color: #333; text-align: justify; }
+    ul, ol { margin-bottom: 20px; padding-left: 28px; }
+    li { margin-bottom: 8px; color: #333; }
+    pre {
+      background: #1e1e1e;
+      color: #d4d4d4;
+      padding: 16px;
+      border-radius: 6px;
+      overflow-x: auto;
+      font-family: Consolas, Monaco, monospace;
+      font-size: 0.9rem;
+      margin: 20px 0;
+    }
+    code {
+      background: #f3f4f6;
+      color: #b91c1c;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: Consolas, Monaco, monospace;
+      font-size: 0.88em;
+    }
+    blockquote {
+      border-left: 4px solid #8c1515;
+      margin: 20px 0;
+      padding: 12px 20px;
+      background: #fff8f8;
+      color: #555;
+      font-style: italic;
+    }
+    .source-box {
+      background: #f9fafb;
+      border: 1px solid #e5e7eb;
+      border-radius: 6px;
+      padding: 12px 18px;
+      margin-bottom: 30px;
+      font-size: 0.88rem;
+      color: #6b7280;
+    }
+    .source-box a { color: #8c1515; }
+    footer {
+      text-align: center;
+      padding: 24px;
+      color: #9ca3af;
+      font-size: 0.85rem;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <div class="top-bar">
+    <span>CS146S: 现代软件开发者 (Stanford Fall 2025) &bull; 核心学术文献</span>
+    <a href="../index_zh.html">&larr; 返回课程大纲导航</a>
+  </div>
+  
+  <div class="container">
+    <div class="category-badge">Week 7 经典论文 / Academic Research</div>
+    <h1>权威学术评估：现代代码审查中 AI 辅助编码实践的实证效能与边界</h1>
+    <div class="source-box"><strong>本地原版 PDF：</strong> <a href="../pdfs/ai-assisted-code-review-assessment.pdf" target="_blank">点击查阅原始高清 PDF 文档 (ai-assisted-code-review-assessment.pdf)</a></div>
+    
+    <div class="article-content">
+      
+    <h2>一、学术研究背景 (Research Background)</h2>
+    <p>本学术论文（发表于顶级软件工程会议）对工业界现代代码审查中的 AI 辅助效能展开了严密的实证评估。研究追踪了数千名专业软件工程师在引入大语言模型（LLM）前后的审查质量、缺陷逃逸率与人机交互动态。</p>
+
+    <h2>二、核心实证发现 (Empirical Findings)</h2>
+    <ul>
+      <li><strong>缺陷捕获能力的维度分化：</strong> AI 在静态逻辑一致性、API 契约违背以及边缘空值检查上的召回率高达 89%，显著超过疲劳状态下的人类审查者；但在业务领域逻辑和长周期架构演进决策上，准确率显著受挫。</li>
+      <li><strong>自动化噪音惩罚 (The Noise Tax)：</strong> 如果 AI 评审给出超过 15% 的误报或针对代码风格的琐碎建议（Nitpicks），人类工程师对系统的信任度将出现不可逆的崩塌，导致后续有价值的安全警告被直接一键忽略。</li>
+      <li><strong>协同审查的最佳配比模式：</strong> 研究证实，“AI 初审筛查常规错误 + 人类资深架构师把关业务与设计”的双层机制，能够在不增加交付延迟的前提下，将生产事故率压缩 42%。</li>
+    </ul>
+
+    <h2>三、对工程团队的实践指导</h2>
+    <p>论文建议现代工程组织在部署 AI 代码审查管线时，必须引入显式的置信度阈值过滤机制（Confidence Threshold Filtering），宁缺毋滥，保护开发者的注意力带宽。</p>
+    
+    </div>
+  </div>
+
+  <footer>
+    <p>斯坦福大学 CS146S 现代软件开发者课程资料 &bull; 工业级精校中文文献</p>
+  </footer>
+</body>
+</html>
